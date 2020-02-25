@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation" app:startDestination="@id/home3">
+    <fragment android:id="@+id/home3" android:name="org.d3if1039.praassessment1.Home" android:label="Home">
+        <action android:id="@+id/action_home3_to_persegiPanjang2" app:destination="@id/persegiPanjang2"/>
+        <action android:id="@+id/action_home3_to_segitiga2" app:destination="@id/segitiga2"/>
+    </fragment>
+    <fragment android:id="@+id/persegiPanjang2" android:name="org.d3if1039.praassessment1.PersegiPanjang"
+              android:label="PersegiPanjang"/>
+    <fragment android:id="@+id/segitiga2" android:name="org.d3if1039.praassessment1.Segitiga" android:label="Segitiga"/>
+    <fragment android:id="@+id/aboutMe2" android:name="org.d3if1039.praassessment1.AboutMe" android:label="AboutMe"/>
+</navigation>

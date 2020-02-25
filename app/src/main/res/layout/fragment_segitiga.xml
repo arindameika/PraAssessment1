@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:text="@string/judul_sgt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/judulSgt" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" style="@style/judul" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.124"/>
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/tf_alas" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/judulSgt" android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:hint="@string/masukkan_alas"/>
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/tf_tinggi" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tf_alas" android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:hint="@string/masukkan_tinggi"/>
+        <Button
+                android:text="@string/hitung"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_Hitung" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tf_tinggi" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" style="@style/buttonKecil"/>
+        <TextView
+                android:text="@string/luas_segitiga"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/judulLuasSgt" android:layout_marginTop="52dp"
+                app:layout_constraintTop_toBottomOf="@+id/bt_Hitung"
+                android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintHorizontal_bias="0.077"
+                app:layout_constraintEnd_toStartOf="@+id/guideline" android:textAlignment="center"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" android:id="@+id/guideline"
+                                                    app:layout_constraintGuide_begin="205dp"
+                                                    android:orientation="vertical" style="@style/buttonKecil"/>
+        <TextView
+                android:text="@string/nilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hasilLuasSgt"
+                app:layout_constraintTop_toBottomOf="@+id/judulLuasSgt" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline"
+                android:layout_marginEnd="8dp" android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"/>
+        <TextView
+                android:text="@string/nilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hasilKelSgt"
+                app:layout_constraintTop_toTopOf="@+id/hasilLuasSgt"
+                app:layout_constraintBottom_toBottomOf="@+id/hasilLuasSgt" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Display3"/>
+        <TextView
+                android:text="@string/kll_sgt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/judulLuasSgt"
+                app:layout_constraintBottom_toBottomOf="@+id/judulLuasSgt"
+                app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                android:textAlignment="center"/>
+        <Button
+                android:text="@string/share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_Share" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/hasilLuasSgt" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" style="@style/buttonKecil"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
